@@ -10,47 +10,18 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <div class="logo">
+    <script src="js/usPresidents.js"></script>
+    <script>
+        async function teste() {
+            const x = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu', {
+                method: 'GET'
+            });
+            const resp = await x.json()
+            console.log(resp)
+        }
 
-            </div>
-        </div>
-    </header>
-
-    <div class="middle-area">
-        <div class="nav-area">
-            <nav>
-                <a href="#" class="current">Home</a>
-            </nav>
-        </div>
-
-
-        <div class="content-area">
-            <main>
-                <h1>Top Questions</h1>
-                <div id="placeholder-content">Conteúdo Principal...</div>
-            </main>
-
-            <aside>
-                <div class="panel">
-                    <h2>Painel Lateral 1</h2>
-                    <div>Conteúdo painel 1</div>
-                </div>
-                <div class="panel">
-                    <h2>Painel Lateral 2</h2>
-                    <div>Conteúdo painel 2</div>
-                </div>
-            </aside>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-area">
-            <div id="placeholder-footer">
-                Conteúdo rodapé...
-            </div>
-        </div>
-    </footer>
+        teste()
+    </script>
 </body>
 
 </html>
